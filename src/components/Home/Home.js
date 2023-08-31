@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import homeLogo from "../../Assets/home-main.svg";
 import Particle from "../Particle";
 import Home2 from "./Home2";
@@ -28,6 +28,15 @@ function Home() {
               <div style={{ padding: 50, textAlign: "left" }}>
                 <Type />
               </div>
+              <Row style={{ marginLeft: 50, cursor: "pointer" }}>
+                <Button
+                  variant="primary"
+                  href="tel:+923084483279"
+                  style={{ maxWidth: "210px" }}
+                >
+                  &nbsp;Contact Me
+                </Button>
+              </Row>
             </Col>
 
             <Col md={5} style={{ paddingBottom: 20 }}>
@@ -35,7 +44,7 @@ function Home() {
                 src={homeLogo}
                 alt="home pic"
                 className="img-fluid"
-                style={{ maxHeight: "450px" }}
+                style={{ maxHeight: "650px" }}
               />
             </Col>
           </Row>

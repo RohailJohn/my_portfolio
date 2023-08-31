@@ -288,6 +288,12 @@ button:focus {
 .main-name {
   color: #cd5ff8;
 }
+.heading-btn {
+  margin-left: 50px;
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
+}
 
 .Typewriter__wrapper {
   font-size: 2.2em !important;
