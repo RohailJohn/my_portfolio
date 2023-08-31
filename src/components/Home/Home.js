@@ -25,10 +25,25 @@ function Home() {
                 <strong className="main-name"> Rohail John</strong>
               </h1>
 
-              <div style={{ padding: 50, textAlign: "left" }}>
+              <div
+                style={{ paddingLeft: 50, paddingTop: 20, textAlign: "left" }}
+              >
                 <Type />
               </div>
-              <Row style={{ marginLeft: 50, cursor: "pointer" }}>
+              <p
+                style={{
+                  marginLeft: 50,
+                  marginTop: 30,
+                  cursor: "pointer",
+                  fontSize: 18,
+                }}
+              >
+                I am passionate about building excellent software that improves
+                the lives of those around me. I specialize in creating software
+                for clients ranging from individuals and small-businesses all
+                the way to large enterprise corporations.
+              </p>
+              <Row style={{ marginLeft: 50, marginTop: 20, cursor: "pointer" }}>
                 <Button
                   variant="primary"
                   href="tel:+923084483279"
