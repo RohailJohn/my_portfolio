@@ -2,12 +2,12 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import expenseTracker from "../../Assets/Projects/expense-tracker.png";
+import sondar from "../../Assets/Projects/film-festival.png";
+import gosto from "../../Assets/Projects/gosto.png";
+import realState from "../../Assets/Projects/real-state.png";
+import reilu from "../../Assets/Projects/reilu-finland.png";
+import bonik from "../../Assets/Projects/bonik.png";
 
 function Projects() {
   return (
@@ -23,68 +23,61 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={chatify}
+              imgPath={realState}
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              title="Real State"
+              description="The Luxurious Urban Residences Development project not only redefined the city's real estate landscape but also set a new standard for upscale urban living. Its successful execution resulted in increased property values in the surrounding area and garnered praise for its design, sustainability features, and meticulous attention to detail. This project's achievements demonstrated my ability to manage complex real estate initiatives ."
+              demoLink="https://realestate-4713d.web.app/"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
+              imgPath={bonik}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              title="Bonik E-commerce"
+              description="As part of a dynamic team, I contributed to the successful development of an E-Commerce Garments App, showcasing my expertise in software engineering and e-commerce solutions. The project aimed to provide users with a seamless and user-friendly platform to browse, select, and purchase garments online. This experience showcases my proficiency in frontend development, backend integration, UI/UX design ."
+              demoLink="https://bonik-ecommerce.web.app/"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={editor}
+              imgPath={gosto}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              title="Gosto E-commerce"
+              description="This e-commerce project allowed me to showcase my ability to transform business requirements into a functional and user-friendly digital platform. It highlighted my skills in project management, technical leadership, and problem-solving, resulting in a successful product that significantly contributed to the organization's online growth and customer satisfaction , UI/UX design, and a commitment to delivering exceptional."
+              demoLink="https://gosto-ecommerce.web.app/"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={leaf}
+              imgPath={expenseTracker}
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
+              title="Expense - Tracker"
+              description="The Expense Tracker application provided users with an efficient tool to manage their finances, promoting better financial awareness and control. Users could track their expenses, identify trends, and make informed decisions to improve their saving habits. The project received positive feedback from users for its user-friendly design and insightful data analysis features."
+              demoLink="https://expense-tracker-rohail.web.app/"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={suicide}
+              imgPath={reilu}
               isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
+              title="REILU"
+              description="As part of this project, I undertook the enhancement and management of a local restaurant, implementing strategies to improve customer experience, operational efficiency, and overall profitability. Through effective collaboration with cross-functional teams and the application of business acumen, I successfully revitalized the restaurant's operations and garnered positive outcomes."
+              demoLink="https://reilukuljetus.fi/ " // <--------Please include a demo link here
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={emotion}
+              imgPath={sondar}
               isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
+              title="Film-Festival Sondar"
+              description="Designed and implemented a comprehensive movie analysis and recommendations system as a personal project to showcase proficiency in data analysis, machine learning, and software development. The project aimed to create a user-friendly platform that offers personalized movie suggestions based on user preferences, enhancing the overall movie-watching experience."
+              demoLink="https://film-festival-sonder-demo.web.app/" // <--------Please include a demo link here
             />
           </Col>
         </Row>
