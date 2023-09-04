@@ -4,6 +4,7 @@ import homeLogo from "../../Assets/home-main.svg";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
+import ContactModal from "./ContactModel";
 
 function Home() {
   return (
@@ -44,13 +45,17 @@ function Home() {
                 the way to large enterprise corporations .
               </p>
               <Row style={{ marginLeft: 50, marginTop: 20, cursor: "pointer" }}>
-                <Button
-                  variant="primary"
-                  href="tel:+923084483279"
-                  style={{ maxWidth: "210px" }}
-                >
-                  &nbsp;Contact Me
+                {/* <ContactModal /> */}
+                <Button variant="primary" style={{ maxWidth: "210px" }}>
+                  Contact Me
                 </Button>
+                {/* <a
+                className="border border-danger"
+                target=""
+                href="tel:+923084483279"
+              >
+                click me
+              </a> */}
               </Row>
             </Col>
 
