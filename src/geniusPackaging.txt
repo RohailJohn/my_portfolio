@@ -1,0 +1,179 @@
+"use client";
+import Logo from "../../assets/images/logo/logo-packaging.svg";
+import Image from "next/image";
+import { BsFacebook, BsInstagram, BsTwitter } from "react-icons/bs";
+import { BiLogoPinterest } from "react-icons/bi";
+import { ImPhone } from "react-icons/im";
+import { HiMail } from "react-icons/hi";
+import { IoLocationOutline } from "react-icons/io5";
+import { AiOutlineArrowRight } from "react-icons/ai";
+
+const navigation = {
+  contact: [
+    { name: "+1 (800) 856-7899", href: "#", icon: <ImPhone /> },
+    {
+      name: "9300 Forest Point Circle Suite 165,Manassas, Virginia",
+      href: "#",
+      icon: <IoLocationOutline />,
+    },
+    { name: "info@geniuspackagingusa.com", href: "#", icon: <HiMail /> },
+  ],
+  links: [
+    { name: "Home", href: "#" },
+    { name: "Boxes By Industry", href: "#" },
+    { name: "Boxes By Style", href: "#" },
+    { name: "About Us", href: "#" },
+    { name: "Blog", href: "#" },
+    { name: "Contact Us", href: "#" },
+  ],
+  company: [
+    { name: "About", href: "#" },
+    { name: "Blog", href: "#" },
+    { name: "Jobs", href: "#" },
+    { name: "Press", href: "#" },
+    { name: "Partners", href: "#" },
+  ],
+  legal: [
+    { name: "Claim", href: "#" },
+    { name: "Privacy", href: "#" },
+    { name: "Terms", href: "#" },
+  ],
+  social: [
+    {
+      name: "Facebook",
+      href: "#",
+      icon: (props) => <BsFacebook {...props} />,
+    },
+    {
+      name: "Instagram",
+      href: "#",
+      icon: (props) => <BsInstagram {...props} />,
+    },
+    {
+      name: "Twitter",
+      href: "#",
+      icon: (props) => <BsTwitter {...props} />,
+    },
+    {
+      name: "Twitter",
+      href: "#",
+      icon: (props) => <BiLogoPinterest {...props} />,
+    },
+  ],
+};
+
+const Footer = () => {
+  console.log("footer");
+  return (
+    <footer className="bg-[#FBF4EC]" aria-labelledby="footer-heading">
+      <h2 id="footer-heading" className="sr-only">
+        Footer
+      </h2>
+      <div className="mx-auto w-[95%] px-6 pb-8 pt-10 sm:pt-24 lg:px-8 lg:pt-12">
+        <div className="xl:grid xl:grid-cols-4">
+          {/* IMG */}
+          <div className="space-y-8">
+            <Image className="" src={Logo} height={100} weight={100} alt="" />
+            <p className="text-xs leading-6">
+              Genius Packaging offers the greatest custom box packaging designs
+              and logos. We desire inventive, appealing cardboard boxes for your
+              business. Expert customizing is available at incredible prices.
+              Our designers know market trends. We creatively curate your
+              designs. Our specialists work 24/7 to offer the best outcomes. Our
+              designers are fashion-savvy. Our personalized boxes are the
+              finest.
+            </p>
+            <div className="flex space-x-6">
+              {navigation.social.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-gray-500 hover:text-gray-400"
+                >
+                  <span className="sr-only">{item.name}</span>
+                  <item.icon className="h-6 w-6" aria-hidden="true" />
+                </a>
+              ))}
+            </div>
+          </div>
+          {/* LI'S */}
+          <div className="mt-16 grid lg:grid-cols-3 grid-cols-1 xl:col-span-3 lg:col-span-3 xl:mt-0">
+            {/* Contact */}
+            <div className="md:grid">
+              <div className="flex justify-end items-end">
+                <div className="lg:w-[95%] w-full h-[71%] flex flex-col">
+                  <h3 className="text-sm font-semibold leading-6 ">Contact</h3>
+                  <ul role="list" className="mt-6 space-y-4">
+                    {navigation.contact.map((item) => (
+                      <li key={item.name} className="">
+                        <a
+                          href={item.href}
+                          className="flex items-center lg:ml-0 ml-[-25px] text-sm leading-6"
+                        >
+                          <div className="text-sm text-green lg:w-8 w-14 lg:ml-0 ml-6">
+                            {item.icon}
+                          </div>
+                          <div className="w-11/12 text-sm ">{item.name}</div>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+            {/* LINKS */}
+            <div className="md:grid lg:flex justify-center items-end hidden">
+              <div className="w-[50%] h-[71%] flex flex-col">
+                <h3 className="text-li font-semibold leading-6">Links</h3>
+                <ul role="list" className="mt-6 space-y-4">
+                  {navigation.links.map((item) => (
+                    <li key={item.name}>
+                      <a href={item.href} className="text-sm leading-6 ">
+                        {item.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            {/* Newsletters */}
+            <div className="md:grid md:grid-cols-2 md:gap-8 flex justify-center items-end">
+              <div className="lg:w-64 w-full h-[71%]">
+                <h3 className="text-sm font-semibold leading-6">Company</h3>
+                <p className="lg:block hidden mt-2 text-sm leading-6 pt-2">
+                  Stay informed with our concise and insightful updates.
+                  <span className="text-blue">Subscribe now!</span>
+                </p>
+                <div>
+                  <div className="relative mt-5 rounded-md shadow-sm">
+                    <input
+                      type="text"
+                      name="account-number"
+                      id="account-number"
+                      className="block w-full h-12 placeholder:text-green placeholder:p-6 rounded-3xl py-1.5 pr-10 ring-1 ring-inset ring-white focus:ring-2 focus:ring-inset focus:ring-white focus:outline-none sm:text-sm sm:leading-6"
+                      placeholder="YOUR EMAIL"
+                    />
+                    <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+                      <AiOutlineArrowRight
+                        className="h-5 w-5 text-blue"
+                        aria-hidden="true"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* CopyRight */}
+        <div className="border-t border/10 pt-8 mt-16 lg:mt-10 ">
+          <p className="text-sm leading-5  text-center text-green ">
+            &copy; All Copyright 2023 by GeniusFixers
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
