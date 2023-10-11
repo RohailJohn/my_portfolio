@@ -177,3 +177,152 @@ const Footer = () => {
 };
 
 export default Footer;
+
+
+"use client";
+import React, { useState } from "react";
+
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+// import Image from "next/image";
+// import LuxuryBox from "../../assets/images/boxsolution/LuxuryBox.svg";
+// import ProductBox from "../../assets/images/boxsolution/ProductBox.svg";
+// import CerealBox from "../../assets/images/boxsolution/CerealBox.svg";
+// import JuiceBox from "../../assets/images/boxsolution/JuiceBox.svg";
+
+
+//   const text = children;
+//   const [isReadMore, setIsReadMore] = useState(true);
+//   const toggleReadMore = () => {
+//     setIsReadMore(!isReadMore);
+//   };
+//   return (
+//     <>
+//       {isReadMore ? text.slice(0, 193) : text}
+//       <div
+//         onClick={toggleReadMore}
+//         className="style-redmore"
+//         style={{
+//           color: "#D5AF34",
+//           fontSize: "17px",
+//           display: "inline-block",
+//           marginLeft: "5px",
+//         }}
+//       >
+//         {isReadMore ? "Read More " : "Show less"}
+//       </div>
+//     </>
+//   );
+// };
+
+function BoxSolution() {
+ 
+
+  const data = [
+    {
+      id: 1,
+      type: "joke",
+      category: "dad",
+      setup: "Why don't scientists trust atoms?",
+      punchline: "Because they make up everything!",
+    },
+    {
+      id: 2,
+      type: "joke",
+      category: "dad",
+      setup: "What do you call fake spaghetti?",
+      punchline: "An impasta!",
+    },
+    {
+      id: 3,
+      type: "joke",
+      category: "dad",
+      setup: "How do you organize a space party?",
+      punchline: "You planet!",
+    },
+    {
+      id: 4,
+      type: "joke",
+      category: "dad",
+      setup: "I used to play piano by ear, but now...",
+      punchline: "I use my hands.",
+    },
+    {
+      id: 5,
+      type: "joke",
+      category: "dad",
+      setup: "What did the ocean say to the shore?",
+      punchline: "Nothing, it just waved!",
+    },
+    {
+      id: 6,
+      type: "joke",
+      category: "dad",
+      setup: "Why don't eggs tell each other secrets?",
+      punchline: "Because they might crack up!",
+    },
+    {
+      id: 7,
+      type: "joke",
+      category: "dad",
+      setup: "I used to be a baker, but...",
+      punchline: "I couldn't make enough dough.",
+    },
+  ];
+
+  const sliderSettings = {
+    dots: true, // Enable indicators (dots)
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4, // Display 3 cards on desktop view
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    responsive: [
+      {
+        breakpoint: 1024, // Adjust this value based on your desired breakpoint
+        settings: {
+          slidesToShow: 1, // Display 1 card on mobile view
+        },
+      },
+    ],
+  };
+
+  return (
+    <div>
+      <div className="">
+        <div className="mx-auto max-w-7xl mt-7 mb-10 gap-8 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1">
+          <Slider
+            {...sliderSettings}
+            className="custom-slider-width "
+            appendDots={(dots) => <ul>{dots}</ul>}
+          >
+            {data.map((item) => (
+              <div
+                data-aos="fade-up"
+                data-aos-anchor-placement="bottom-bottom"
+                key={item.question}
+                className="helo "
+              >
+                <div
+                  style={{ backgroundColor: "" }}
+                  className="service-page-slider"
+                >
+                  <h3 className="">{item.setup}</h3>
+                  <p className="">asd</p>
+                </div>
+              </div>
+            ))}
+          </Slider>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default BoxSolution;
+
+// npm install react-slick slick-carousel
+// mx-auto max-w-7xl
